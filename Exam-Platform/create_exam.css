@@ -1,0 +1,20 @@
+.question_format{
+  display:none;
+}
+html body{
+  background-color: #0B0A2B;
+  font-family:sans-serif;
+  color: white;
+}
+.jumbotron {
+    background-color:transparent !important;
+}
+.jumbotron h1{
+  color:#c23232;
+}
+.jumbotron p{
+  color:#c23232;
+}
+#sel1{
+  color:#deb735;
+}

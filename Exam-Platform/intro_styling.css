@@ -1,0 +1,18 @@
+#exam-dashboard h1
+{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 36px;
+  font-weight: 400;
+}
+a{
+  color: white;
+}
+a:hover{
+  color: red;
+}
+.conducted_exams{
+  margin-top:15px;
+  border:5px solid #AB8E1B;
+  border-radius: 40%;
+}
