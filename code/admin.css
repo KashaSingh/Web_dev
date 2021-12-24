@@ -1,0 +1,682 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet';
+:root
+{
+	--dk-gray-100: #F3F4F6;
+	--dk-gray-200: #E5E7EB;
+	--dk-gray-300: #D1D5DB;
+	--dk-gray-400: #9CA3AF;
+	--dk-dark-bg: #0e346f;
+	--dk-darker-bg: #4465f8;
+	--navbar-bg-color: #1052a7;
+	--sidebar-bg-color: #040737;
+	--sidebar-width: 250px;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	font-family: 'Inter', sans-serif;
+	background-color: var(--dk-darker-bg);
+	font-size: 14.8px;
+}
+.sidebar
+{
+	background-color: var(--sidebar-bg-color);
+	width: var(--sidebar-width);
+	z-index: 2;
+}
+.sidebar .sidebar-header
+{
+	border-bottom: 1px solid #2a2b3c
+}
+.sidebar .sidebar-header h5 a
+{
+	color: var(--dk-gray-300);
+	font-size:13px;
+}
+.sidebar > ul > li
+{
+	padding: 11.2px 28px;
+}
+.sidebar ul > li > a
+{
+	color: var(--dk-gray-400);
+	text-decoration: none;
+}
+.sidebar ul > li img
+{
+	height:20px;
+	width:20px;
+	margin-bottom:6px;
+	margin-right:6px;
+}
+.sidebar ul > li.has-dropdown > a:after
+{
+	content: url("https://img.icons8.com/officexs/16/000000/expand-arrow.png");
+	float: right;
+	transition: all .3s ease-in-out;
+}
+.sidebar ul .opened > a:after
+{
+	transform: rotate(-180deg);
+}
+.sidebar ul .sidebar-dropdown
+{
+	padding-top: 10px;
+	padding-left: 30px;
+	display: none;
+}
+.sidebar ul .sidebar-dropdown.active
+{
+	display: block;
+}
+.sidebar ul .sidebar-dropdown > li > a
+{
+  font-size: 13.6px;
+	padding: 8px 0;
+	display: block;
+}
+#wrapper-dashboard
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;
+}
+#wrapper-academicCalendar-current
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;
+}
+#wrapper-academicCalendar-archives
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;
+}
+#wrapper-academicCalendar-archives .Heading
+{
+	margin-bottom:24px;
+}
+#wrapper-timeTables
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;
+}
+#wrapper-instituteCourses
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;	
+}
+#wrapper-additionalCourses
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;	
+}
+#wrapper-faculty
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;	
+}
+#wrapper-delete-content
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;	
+}
+#wrapper-news
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;	
+}
+#wrapper-documentation
+{
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;	
+}
+.navbar
+{
+	background-color: var(--navbar-bg-color) !important;
+	border: none !important;
+	margin-left: var(--sidebar-width);
+	transition: all .3s ease-in-out;
+}
+.navbar .navbar-header
+{
+	color:#FFF !important;
+	font-size: 20px;
+	font-family: comic sans ms, sans-serif;
+	line-height: 55px !important;
+	padding: 0 !important;
+}
+.navbar .navbar-nav>li>a
+{
+	color: #EEE !important;
+	line-height: 55px !important;
+	padding: 0 10px !important;
+	float: left !important;
+}
+.navbar>.container .navbar-header, .navbar>.container-fluid .navbar-header
+{
+	margin: 0 !important;
+}
+.Heading
+{
+	color: var(--dk-gray-300);
+}
+.Heading .content
+{
+	background-color: var(--dk-dark-bg);
+}
+.Heading p
+{
+	color: var(--dk-gray-400);
+}
+.statistics
+{
+	color: var(--dk-gray-200);
+}
+.statistics .box
+{
+	background-color: var(--dk-dark-bg);
+}
+.statistics .box .icon
+{
+	height:60px;
+	width:60px;
+	border-radius:50%;
+	display:flex;
+}
+.statistics .box .icon img
+{
+	margin:auto;
+	height:28px;
+	width:28px;
+}
+.admins .box .admin
+{
+	background-color: var(--dk-dark-bg);
+}
+.admins .box h4
+{
+	color: var(--dk-gray-100);
+}
+.admins .box h3
+{
+	color: var(--dk-gray-300);
+}
+.admins .box p
+{
+	color: var(--dk-gray-400)
+}
+#uploadAcadCalForm
+{
+  margin: 26px auto;
+  min-width:455.75px;
+  width:30%;
+  height:fit-content;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: #888 2px 4px;
+  padding:20px;
+}
+#uploadAcadCalForm .CalendarTitle
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ChooseCalendarFile
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#uploadAcadCalForm form .chooseCalendar
+{
+  margin-left:auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.ChooseCalendarFile + label
+{
+  width: fit-content;
+  background-color: #5f7cff;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 8px;
+  margin-bottom:8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.upload
+{
+  width: 100%;
+  background-color: #5f7cff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.upload:hover, .ChooseCalendarFile + label:hover
+{
+  background-color: #4465f8;
+}
+#uploadWarningCal
+{
+  color:red;
+  text-align:center;
+}
+#uploadTimeTableForm
+{
+	margin: 26px auto;
+	min-width:455.75px;
+	width:30%;
+	height:240px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: #888 2px 4px;
+	padding:20px;
+}
+.ChooseScheduleFile
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#uploadTimeTableForm form .chooseSchedule
+{
+  margin-left:auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.ChooseScheduleFile + label
+{
+  width: fit-content;
+  background-color: #5f7cff;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 8px;
+  margin-bottom:8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.upload:hover, .ChooseScheduleFile + label:hover
+{
+  background-color: #4465f8;
+}
+#uploadWarningSchedule
+{
+  color:red !important;
+  text-align:center;
+}
+#addFacultyForm
+{
+	margin: 26px auto;
+	min-width:455.75px;
+	width:30%;
+	height:fit-content;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: #888 2px 4px;
+	padding:20px;
+}
+#addFacultyForm .facultyName
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#addFacultyForm .facultyMail
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ChooseCVFile
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#addFacultyForm form .chooseCV
+{
+  margin-left:auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.ChooseCVFile + label
+{
+  width: fit-content;
+  background-color: #5f7cff;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 8px;
+  margin-bottom:8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.upload:hover, .ChooseCVFile + label:hover
+{
+  background-color: #4465f8;
+}
+#uploadWarningCV
+{
+  color:red !important;
+  text-align:center;
+}
+#uploadNewsForm
+{
+	margin: 26px auto;
+	min-width:455.75px;
+	width:30%;
+	height:fit-content;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: #888 2px 4px;
+	padding:20px;
+}
+#uploadNewsForm .newsTitle
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ChooseNewsFile
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#uploadNewsForm form .chooseNews
+{
+  margin-left:auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.ChooseNewsFile + label
+{
+  width: fit-content;
+  background-color: #5f7cff;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 8px;
+  margin-bottom:8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.upload:hover, .ChooseNewsFile + label:hover
+{
+  background-color: #4465f8;
+}
+#uploadWarningNews
+{
+  color:red !important;
+  text-align:center;
+}
+#uploadCourseForm
+{
+	margin: 26px auto;
+	min-width:455.75px;
+	width:30%;
+	height:fit-content;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: #888 2px 4px;
+	padding:20px;
+}
+#uploadCourseForm .courseName
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#uploadCourseForm .courseCode
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ChooseCourseFile
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#uploadCourseForm form .chooseCourse
+{
+  margin-left:auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.ChooseCourseFile + label
+{
+  width: fit-content;
+  background-color: #5f7cff;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 8px;
+  margin-bottom:8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.upload:hover, .ChooseCourseFile + label:hover
+{
+  background-color: #4465f8;
+}
+#uploadWarningCourse
+{
+  color:red !important;
+  text-align:center;
+}
+#uploadAddCourseForm
+{
+	margin: 26px auto;
+	min-width:455.75px;
+	width:30%;
+	height:fit-content;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: #888 2px 4px;
+	padding:20px;
+}
+#uploadAddCourseForm .courseName
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#uploadAddCourseForm .courseCode
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#uploadAddCourseForm form .chooseCourse
+{
+  margin-left:auto;
+  margin-right: auto;
+  width: fit-content;
+}
+#uploadWarningAddCourse
+{
+  color:red !important;
+  text-align:center;
+}
+.table-fill
+{
+	background: white;
+	border-radius:3px;
+	border-collapse: collapse;
+	height: fit-content;
+	margin-top: 24px;
+	padding:5px;
+	width: 100%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+th
+{
+	color:#D5DDE5;
+	background:var(--dk-dark-bg);
+	border-bottom:4px solid #9ea7af;
+	border-right: 1px solid #343a45;
+	font-size:23px;
+	font-weight: 100;
+	padding:24px;
+	text-align:left;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	vertical-align:middle;
+}
+th:first-child
+{
+	border-top-left-radius:3px;
+}
+th:last-child
+{
+	border-top-right-radius:3px;
+	border-right:none;
+}
+tr
+{
+	border-top: 1px solid #C1C3D1;
+	border-bottom: 1px solid #C1C3D1;
+	color:#666B85;
+	font-size:16px;
+	font-weight:normal;
+	text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+tr:hover td
+{
+	background:#4E5066;
+	color:#FFFFFF;
+	border-top: 1px solid #22262e;
+}
+tr:first-child
+{
+	border-top:none;
+}
+tr:last-child
+{
+	border-bottom:none;
+}
+tr:nth-child(odd) td
+{
+	background:#EBEBEB;
+}
+tr:nth-child(odd):hover td
+{
+	background:#4E5066;
+}
+tr:last-child td:first-child
+{
+	border-bottom-left-radius:3px;
+}
+tr:last-child td:last-child
+{
+	border-bottom-right-radius:3px;
+}
+td
+{
+	background:#FFFFFF;
+	padding:20px;
+	text-align:left;
+	vertical-align:middle;
+	font-weight:300;
+	font-size:18px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+	border-right: 1px solid #C1C3D1;
+}
+td:last-child
+{
+	border-right: 0px;
+}
+#deleteVideoForm
+{
+	margin: 26px auto;
+	min-width:455.75px;
+	width:30%;
+	height:fit-content;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: #888 2px 4px;
+	padding:20px;
+}
+#deleteVideoForm .videoID
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.upload:hover
+{
+  background-color: #4465f8;
+}
+#deleteVideoWarning
+{
+  color:red !important;
+  text-align:center;
+}
+#loadingModal
+{
+  position:absolute;
+  top:0;
+  height:100%;
+  width:100%;
+  background-color:rgba(238,238,238,0.5);
+  z-index:5;
+}
+#loadingModal img
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  margin: auto;
+}
