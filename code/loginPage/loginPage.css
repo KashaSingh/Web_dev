@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+html
+{
+    height:100%;
+    width:100%;
+}
+body
+{
+    overflow: hidden;
+    background-image:url("../assets/images/LoginBackground.jpg");
+    font-family:'Poppins', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+}
+#back-panel
+{
+    height:80%;
+    width: 34.2%;
+    min-height:500px;
+    background-color:rgba(255,255,255,0.1);
+    backdrop-filter:blur(5px);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 5px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+#front-panel
+{
+    height:90%;
+    width:30%;
+    min-height:562.5px;
+    background: linear-gradient(to bottom,#83dff8,#e6f2f6);
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+    z-index:1;
+}
+#LoginPage-logo
+{
+    margin-top: 100px;
+    margin-left:10%;
+}
+.square
+{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow:0 25px 45px rgba(0,0,0,0.1);
+    border:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.2);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.1);
+    border-radius:10px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+@keyframes animate
+{
+    0%, 100%
+    {
+        transform:translateY(-40px);
+    }
+    50%
+    {
+        transform:translateY(40px);
+    }
+}
+.square:nth-child(1){top:-50px; right:-60px; width:100px; height:100px;}
+.square:nth-child(2){top:150px; left:-100px; width:120px; height:120px;}
+.square:nth-child(3){bottom:50px; right:-60px; width:80px; height:80px;}
+.square:nth-child(4){bottom:-105px; left:100px; width:50px; height:50px;}
+.square:nth-child(5){top:-80px; left:140px; width:60px; height:60px;}
+#text
+{
+    margin-top:50px;
+    text-align:center;
+    color:#ff993a;
+    margin-left:10%;
+    margin-right:10%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#my-signin2
+{
+    margin-top:50px;
+    margin-left:23%;
+}
+#signOut
+{
+    background-color:#fff;
+    box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    cursor:pointer;
+    display:flex;
+    margin-top:50px;
+    margin-left:20%;
+    width: 60%;
+    border-radius:10px;
+}
+#signOut img
+{
+    display:inline-block;
+    width:65px;
+    height:65px;
+}
+#signOut div
+{
+    margin-top:auto;
+    font-size:15px;
+    font-family: Geneva, sans-serif;
+    margin-bottom:auto;
+}
+@media (max-width:1030px)
+{
+    #back-panel
+    {
+        height:80%;
+        width:90%;
+    }
+    #front-panel
+    {
+        height:90%;
+        width:80%;
+    }
+    #text
+    {
+        font-size: 2rem;
+    }
+    #my-signin2
+    {
+        margin-left:33%;
+    }
+}
