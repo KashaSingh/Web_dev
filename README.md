@@ -1,11 +1,2 @@
-# DBMS_Project_AcadGenix
+# Project_AcadGenix
 an E-Learning Platform WebApp
-
-19BCS038
-19BCS049
-19BCS050
-19BCS051
-19BCS053
-19BCS063
-19BCS094
-19BCS110
